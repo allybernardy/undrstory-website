@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>undrstory — what's your undrstory?</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231F2A1C'/><text y='.9em' x='50%' text-anchor='middle' font-size='62' font-family='Georgia,serif' fill='%23A3B18A' dy='0.1em'>u</text></svg>">
-<meta name="description" content="most people look at the canopy. we read the roots. strategic advisory for leaders who sense something important isn't being said.">
+<meta name="description" content="the thing I keep seeing — in every organization, at every stage — is the same pattern. performative busyness mistaken for momentum. undrstory finds what's actually running your business.">
 <meta property="og:title" content="undrstory — what's your undrstory?">
-<meta property="og:description" content="most people look at the canopy. we read the roots. strategic advisory for leaders who sense something important isn't being said.">
+<meta property="og:description" content="the thing I keep seeing — in every organization, at every stage — is the same pattern. performative busyness mistaken for momentum. undrstory finds what's actually running your business.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://undrstory.ink">
 <meta name="twitter:card" content="summary_large_image">
@@ -106,7 +106,6 @@ nav.scrolled {
   background: url('fern.jpeg') center center / cover no-repeat;
   z-index: 0;
 }
-/* fade from image into forest green on right edge */
 .hero-image::after {
   content: '';
   position: absolute;
@@ -141,14 +140,6 @@ nav.scrolled {
   margin-bottom: 1rem;
   letter-spacing: -0.04em;
 }
-.hero-italic {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 1.15rem;
-  font-weight: 400;
-  color: var(--sage-light);
-  margin-bottom: 1.6rem;
-}
 .hero-divider { width:2.5rem; height:1px; background:var(--sage); margin-bottom:2rem; }
 .hero-body {
   font-family: var(--sans);
@@ -157,6 +148,14 @@ nav.scrolled {
   color: rgba(240,235,224,0.78);
   line-height: 1.9;
   margin-bottom: 3rem;
+}
+.hero-body p {
+  margin-bottom: 1rem;
+}
+.hero-body p:last-child { margin-bottom: 0; }
+.hero-body strong {
+  font-weight: 400;
+  color: rgba(240,235,224,0.95);
 }
 .hero-actions { display:flex; gap:2rem; align-items:center; }
 .btn-sage {
@@ -188,6 +187,74 @@ nav.scrolled {
 }
 .btn-text:hover { color: rgba(240,235,224,0.85); border-color: rgba(240,235,224,0.5); }
 
+/* ── MIRROR SECTION ── */
+#mirror {
+  background: var(--forest);
+  padding: 7rem 3.5rem;
+}
+.mirror-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.mirror-label {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 4rem;
+  display: block;
+}
+.mirror-statement {
+  padding: 2.8rem 0;
+  border-top: 1px solid rgba(163,177,138,0.15);
+}
+.mirror-statement:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+.mirror-statement:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.mirror-statement p {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  font-weight: 400;
+  color: rgba(240,235,224,0.85);
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+.mirror-statement p em {
+  font-style: italic;
+  color: var(--sage-light);
+}
+.mirror-closer {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--sage);
+  margin-top: 3.5rem;
+  display: block;
+  letter-spacing: 0.04em;
+}
+
+/* ── CANOPY LINE ── */
+.canopy-line {
+  background: var(--forest);
+  padding: 3rem 3.5rem;
+  text-align: center;
+}
+.canopy-line p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  color: var(--sage-light);
+  line-height: 1.6;
+}
+
 /* ── MISSION STRIP ── */
 .mission-strip {
   background: var(--mid-green);
@@ -216,43 +283,62 @@ nav.scrolled {
 }
 
 /* ── UNDRSTORY ── */
-#undrstory { background: var(--bone); padding: 7rem 3.5rem; }
+#undrstory {
+  position: relative;
+  padding: 9rem 3.5rem;
+  overflow: hidden;
+}
+#undrstory::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('tunnel.jpeg') center center / cover no-repeat;
+  z-index: 0;
+}
+#undrstory::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 14, 6, 0.85);
+  z-index: 1;
+}
 .undrstory-inner {
-  max-width: 1100px;
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 4rem;
+  text-align: center;
+}
+.undrstory-section-label {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 2.5rem;
 }
 .undrstory-body p {
   font-family: var(--sans);
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   font-weight: 300;
-  color: var(--charcoal);
-  line-height: 1.9;
-  margin-bottom: 1.4rem;
+  color: rgba(240,235,224,0.82);
+  line-height: 2;
+  margin-bottom: 1.6rem;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
 }
 .undrstory-body p:last-child { margin-bottom: 0; }
-.undrstory-body em { font-family: var(--serif); font-style: italic; font-weight: 400; }
-.undrstory-blockquote {
-  border-left: 2px solid var(--sage);
-  padding-left: 1.8rem;
-  margin: 1.8rem 0;
-}
-.undrstory-blockquote p {
-  font-family: var(--sans);
-  font-size: 0.9rem !important;
-  color: var(--moss) !important;
-  margin-bottom: 0.55rem !important;
-  line-height: 1.6 !important;
-}
+.undrstory-body em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--sage-light); }
 .undrstory-closer {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 1rem;
-  color: var(--moss);
+  font-size: 1.1rem;
+  color: var(--sage-light);
   display: block;
-  margin-top: 0.5rem;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(163,177,138,0.25);
+  line-height: 1.7;
 }
 
 /* ── FOREST STRIP ── */
@@ -380,7 +466,6 @@ nav.scrolled {
   margin-bottom: 0;
 }
 
-/* plain offering row */
 .offering-row {
   display: grid;
   grid-template-columns: 260px 1fr 170px;
@@ -391,7 +476,6 @@ nav.scrolled {
 }
 .offering-row:last-of-type { border-bottom: 1px solid rgba(31,42,28,0.1); }
 
-/* ground truth — entire row in white card */
 .offering-row-card {
   background: #ffffff;
   border: 1px solid rgba(31,42,28,0.07);
@@ -457,7 +541,6 @@ nav.scrolled {
   display: block;
 }
 
-/* ground truth inner content (no extra card) */
 .gt-body p {
   font-family: var(--sans);
   font-size: 0.92rem;
@@ -498,7 +581,6 @@ nav.scrolled {
   flex-shrink: 0;
 }
 
-/* mother tree — no border, plain on bone */
 .offering-row-plain {
   display: grid;
   grid-template-columns: 260px 1fr 170px;
@@ -675,12 +757,10 @@ nav.scrolled {
   grid-template-columns: 380px 1fr;
   gap: 5rem;
   align-items: start;
-  margin-bottom: 4rem;
-  padding-bottom: 4rem;
-  border-bottom: 1px solid rgba(31,42,28,0.1);
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
-/* photo with clay offset border behind */
 .about-portrait-wrap {
   position: relative;
   display: inline-block;
@@ -763,7 +843,6 @@ nav.scrolled {
   display: block;
 }
 
-/* bottom credentials — 3 columns */
 .about-bottom {}
 .about-credentials-grid {
   display: grid;
@@ -905,8 +984,8 @@ footer {
   .hero-image { min-height:40vh; }
   .hero-content { padding:5rem 2rem 4rem; }
   .mission-strip { padding:1.2rem 1.5rem; }
+  #mirror { padding:4rem 1.5rem; }
   #undrstory { padding:5rem 1.5rem; }
-  .undrstory-inner { grid-template-columns:1fr; gap:1.2rem; }
   #forest-strip { padding:4rem 1.5rem; }
   #alongside { padding:2rem 1.5rem; }
   .alongside-inner { flex-direction:column; gap:1.2rem; }
@@ -948,9 +1027,14 @@ footer {
   <div class="hero-content">
     <p class="hero-eyebrow">strategic advisory</p>
     <h1 class="hero-wordmark">undrstory</h1>
-    <p class="hero-italic">what's your undrstory?</p>
     <div class="hero-divider"></div>
-    <p class="hero-body">most people look at the canopy.<br>we read the roots.<br><br>this is for the ones ready for depth.</p>
+    <div class="hero-body">
+      <p>the same pattern. in every organization. at every stage.</p>
+      <p>big investments. hardworking teams. months of work.</p>
+      <p><strong>performative busyness mistaken for momentum.</strong></p>
+      <p>someone is supposed to be holding the whole picture.</p>
+      <p><strong>nobody is.</strong></p>
+    </div>
     <div class="hero-actions">
       <a href="#contact" class="btn-sage">begin here</a>
       <a href="#offerings" class="btn-text">see the work</a>
@@ -958,41 +1042,58 @@ footer {
   </div>
 </section>
 
+<!-- mirror section -->
+<section id="mirror">
+  <div class="mirror-inner">
+    <span class="mirror-label reveal">you might be here if</span>
+
+    <div class="mirror-statement reveal">
+      <p>you're scaling faster than your current structure can hold.</p>
+    </div>
+
+    <div class="mirror-statement reveal">
+      <p>you're about to sell, acquire, or make a bet <em>you can't easily undo.</em></p>
+    </div>
+
+    <div class="mirror-statement reveal">
+      <p>you're heading into the next phase and not fully confident the foundation beneath it is solid.</p>
+    </div>
+
+    <div class="mirror-statement reveal">
+      <p>you've been hitting the same wall for a while — and the last few attempts to break through it haven't worked.</p>
+    </div>
+
+    <div class="mirror-statement reveal">
+      <p>you've done the offsites. the sprints. the restructures. the business reviews. <em>you're still waiting for something to actually shift.</em></p>
+    </div>
+
+    <div class="mirror-statement reveal">
+      <p>you don't need another framework. you need someone with no stake in the answer — just fully on your side.</p>
+    </div>
+
+    <span class="mirror-closer reveal">most people look at the canopy. we read the roots.</span>
+  </div>
+</section>
+
 <!-- mission strip -->
 <div class="mission-strip">
-  <p>undrstory works where most advisors don't go — beneath the strategy, beneath the narrative, into the dynamics that are actually running your business. we name what's true. we help you lead from there.</p>
+  <p>undrstory works where most advisors don't go — beneath the strategy, beneath the narrative, into the dynamics that are actually running your business.</p>
 </div>
 
 <!-- the undrstory -->
 <section id="undrstory">
   <div class="undrstory-inner">
-    <div><p class="section-label">the undrstory</p></div>
+    <p class="undrstory-section-label">the undrstory</p>
     <div class="undrstory-body reveal">
-      <p>undrstory is for leaders who are pouring everything in — and still feel like <em>something keeps drifting.</em></p>
-      <p>like there's a drag they can't name. a ceiling they can't break through. a vision that keeps almost landing but doesn't.</p>
-      <div class="undrstory-blockquote">
-        <p>the launch that didn't take off.</p>
-        <p>the new product that didn't change the game.</p>
-        <p>the partnership that didn't pan out the way you both believed it would.</p>
-        <p>the reorg that almost worked.</p>
-        <p>the current running underneath every meeting that no one can quite name.</p>
-      </div>
-      <p>that gap rarely lives where you're looking. it lives in what nobody's saying out loud. in the structure that looks right but doesn't move.</p>
-      <p>we find it. we name it. and we help you build from there — <em>intentionally, regeneratively, from the ground up.</em></p>
-      <p>the read is only useful if it lands. this work is delivered with the kind of calm that makes hard things easier to face — the person you call when it gets difficult, who helps you find the way through without the spiral.</p>
-      <p class="undrstory-closer">direct by nature. always on your side.</p>
-      <p class="undrstory-closer" style="margin-top:0.8rem;opacity:0.7;">the roots do their best work in the dark. so do we.</p>
+      <p>you've been holding a lot.</p>
+      <p>leading an organization forward takes everything you have. people in motion, projects in motion — and the needle still isn't moving the way it should.</p>
+      <p>you don't have to have it figured out before you reach out.</p>
+      <p>undrstory comes in and does what nobody inside has the mandate or the vantage point to do — asks the real questions, reads the whole system, and brings you what's actually there. clearly. directly. in a way that stops the spiral instead of starting one.</p>
+      <p>we read how the pieces connect, where the gaps are, what's driving the team beneath the surface. we help reframe the strategy, the conversations, sometimes the goal itself.</p>
+      <span class="undrstory-closer">the truth, delivered well, changes everything.</span>
     </div>
   </div>
 </section>
-
-<!-- forest strip -->
-<div id="forest-strip">
-  <div class="forest-strip-inner">
-    <p class="forest-quote">in a forest, the understory holds more life than the canopy above it. the most important growth has always happened beneath what's visible.</p>
-    <p class="forest-sublabel">regenerative by design</p>
-  </div>
-</div>
 
 <!-- built alongside -->
 <div id="alongside">
@@ -1026,15 +1127,14 @@ footer {
       <p class="offerings-note">not sure yet? the canopy walk is a two-hour read for leaders who want to experience the work before going deeper.</p>
     </div>
 
-    <!-- canopy walk — plain row -->
     <div class="offering-row reveal">
       <div>
-        <p class="offering-type-label">not sure yet?</p>
+        <p class="offering-type-label">start here</p>
         <h3 class="offering-name">the canopy walk</h3>
         <p class="offering-price">$500</p>
       </div>
       <div class="offering-body">
-        <p>a two-hour strategic call for leaders who feel the drag but can't name it yet. you share the view from the top. we read what's underneath.</p>
+        <p>a two-hour strategic call for leaders who want a read before committing to the next move. you share the view from the top. we read what's underneath.</p>
         <p>requires pre-work submitted before the call — the more honest, the better the read. deductible in full from the ground truth if you decide to go deeper.</p>
         <span class="offering-italic-note">for founders who want a read before committing to the full engagement. the biggest impact lives in the ground truth.</span>
       </div>
@@ -1044,7 +1144,6 @@ footer {
       </div>
     </div>
 
-    <!-- ground truth — full white card around entire row -->
     <div class="offering-row-card reveal reveal-delay-1" id="ground-truth">
       <div>
         <p class="offering-type-label">six-week diagnostic — one client at a time</p>
@@ -1052,15 +1151,16 @@ footer {
         <p class="offering-price">$9,000</p>
       </div>
       <div class="gt-body">
+        <p style="font-family:var(--serif);font-style:italic;font-size:0.88rem;color:var(--moss);margin-bottom:1rem;">one bad hire, one misaligned launch, one planning cycle built on the wrong assumption costs more than this.</p>
         <p>a full immersion into what's actually happening beneath the surface of your business. we sit in the rooms, meet the people, read the currents, and name what no one else has named.</p>
-        <p>this is not an audit. it is a read — of the dynamics, the gaps, the things people feel but won't say, and the hidden thread connecting what's not working across every corner of the business.</p>
+        <p>this is not an audit. it is a read — of the dynamics, the gaps, what the team knows but hasn't had the space to surface, and the hidden thread connecting what's not working across every corner of the business.</p>
         <p class="offering-results-label">this often results in</p>
         <ul class="offering-results">
+          <li>a calmer, clearer founder who can actually lead from that place</li>
           <li>renewed momentum and energy in the business</li>
           <li>clearer direction across teams and projects</li>
           <li>employees who feel the shift and move differently</li>
           <li>progress that finally feels collaborative</li>
-          <li>a calmer, clearer founder who can actually lead from that place</li>
         </ul>
         <span class="offering-italic-note">duration adjusts to complexity. one client at a time — always.</span>
       </div>
@@ -1070,7 +1170,6 @@ footer {
       </div>
     </div>
 
-    <!-- mother tree — plain, no border styling -->
     <div class="offering-row-plain reveal reveal-delay-2" id="mother-tree">
       <div>
         <p class="offering-type-label">ongoing advisory — by invitation</p>
@@ -1113,14 +1212,15 @@ footer {
         <em>but you will thank<br>me later.</em>
       </h2>
     </div>
-    <div class="promise-right reveal reveal-delay-2">
-      <p>sometimes the read lands the moment it's delivered. relief. recognition. the feeling, finally named.</p>
-      <p>sometimes it doesn't. the first thing that comes up is resistance — because what's being named touches something you've built, believed in, or held as true for a long time. that's not defensiveness. that's just what it feels like when something real arrives before you're ready to let it in.</p>
-      <p>the truth has its own timeline.</p>
-      <div class="promise-offer">
-        <p>when it lands — and it will — come back. i'll give you a complimentary one-hour call to look at it together with fresh eyes. not to say I told you so. to go deeper now that you're ready.</p>
+      <div class="promise-right reveal reveal-delay-2">
+        <p>sometimes the read lands the moment it's delivered. relief. recognition. the feeling, finally named.</p>
+        <p>sometimes it doesn't. the first thing that comes up is resistance — because what's being named touches something you've built, believed in, or held as true for a long time. that's not defensiveness. that's just what it feels like when something real arrives before you're ready to let it in.</p>
+        <p>the truth has its own timeline.</p>
+        <div class="promise-offer">
+          <p>when it lands — and it will — come back. i'll give you a complimentary one-hour call to look at it together with fresh eyes. not to say I told you so. to go deeper now that you're ready.</p>
+        </div>
+        <a href="#contact" style="display:inline-block;margin-top:2rem;font-family:var(--sans);font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-light);text-decoration:none;border-bottom:1px solid rgba(196,206,184,0.3);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;" onmouseover="this.style.color='var(--bone)';this.style.borderColor='rgba(240,235,224,0.5)'" onmouseout="this.style.color='var(--sage-light)';this.style.borderColor='rgba(196,206,184,0.3)'">ready for the read → begin here</a>
       </div>
-    </div>
   </div>
 </section>
 
@@ -1175,31 +1275,10 @@ footer {
         </h2>
         <p class="about-title">founder, undrstory</p>
         <div class="about-bio-new">
-          <p>the thing I keep seeing — in every organization, at every stage — is the same pattern.</p>
-          <p>big investments. hardworking teams. months of work. performative busyness mistaken for momentum. the roadmap is full, the launches happen — and somewhere in the background, there's a quiet assumption that someone else is making sure it all connects. that someone has the view of the whole. that the thread running through all of it is being held.</p>
-          <p>often, nobody is holding it.</p>
-          <p>and underneath it all, a question nobody's asking out loud: does any of this actually connect? is this moving us toward the thing we say we're building — or does it just feel like it is?</p>
-          <p>and then there's the second pattern. the one that's harder to say.</p>
-          <p>sometimes the goal itself isn't real. not because the leader is dishonest — but because there's a difference between the goal someone declares and the goal they're actually ready for. I've mapped the path to what someone said they wanted and watched them pull back the moment it became concrete.</p>
-          <p>that's not hesitation. that's information.</p>
-          <p>I'm not here to push you toward a goal you named but don't actually want. I'm here to help you find the one you do — and build something real from there.</p>
+          <p>I've spent my career inside the machinery — not advising from a distance, but embedded in the decisions, the teams, the moments where things either connect or they don't. operations. product. strategy. the messy middle where what's on the slide meets what's actually happening on the ground floor.</p>
+          <p>I've launched international offices, integrated acquisitions, built AI tools, reorganized departments, redesigned how companies onboard and retain their people. I've opened a wine bar, a gallery, audited a museum, hosted wellness retreats, led teams through hypergrowth and through contraction. across tech, hospitality, wellness, nonprofit, the arts — the industries change. the patterns don't.</p>
+          <p>that depth is what makes the read accurate. I'm not pattern-matching to a framework. I'm reading your specific system — how it moves, where it stalls, what it's actually optimized for whether you intended that or not.</p>
           <span class="bio-closer">direct by nature. always on your side.</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- full-width credentials -->
-    <div class="about-bottom reveal">
-      <div class="about-credentials-grid">
-        <div class="about-cred-col">
-          <p>Ally has worked deep inside operations and product at high-growth startups — leading teams and driving decisions that actually moved things. she's launched international offices, opened new markets, integrated acquisitions, built AI systems, and reorganized departments — several times over.</p>
-        </div>
-        <div class="about-cred-col">
-          <p>she's redesigned onboarding programs, opened a wine bar, hosted wellness retreats, and been boots on the ground across industries most advisors have only read about. she has a particular ability to name hard things in ways people can actually receive — not because she softens the truth, but because she delivers it from a place that stops the spiral.</p>
-        </div>
-        <div class="about-cred-col">
-          <p>founders and executive leaders describe her as the person who finally said the thing clearly enough that they could act on it.</p>
-          <p><em>undrstory exists because the truth, delivered well, changes everything.</em></p>
         </div>
       </div>
     </div>
@@ -1224,13 +1303,21 @@ footer {
       <input type="text" name="name" placeholder="your name" class="form-input" required>
       <input type="email" name="email" placeholder="your email" class="form-input" required>
       <input type="text" name="company" placeholder="your company / what you're building" class="form-input">
-      <textarea name="message" placeholder="what's changed recently, what are you trying to build, and what keeps drifting despite your best efforts?" class="form-textarea"></textarea>
+      <textarea name="message" placeholder="what's the moment you're in right now?" class="form-textarea"></textarea>
       <button type="submit" class="form-submit">send it →</button>
       <p class="form-note">not sure where to start? email <a href="mailto:ally@undrstory.ink">ally@undrstory.ink</a> — what's drawing you to this work and we'll figure out together if it's a fit.</p>
       <p class="form-small">every message read personally. you'll hear back within 48 hours.</p>
     </form>
   </div>
 </section>
+
+<!-- forest strip -->
+<div id="forest-strip">
+  <div class="forest-strip-inner">
+    <p class="forest-quote">in a forest, the understory holds more life than the canopy above it. the most important growth has always happened beneath what's visible.</p>
+    <p class="forest-sublabel">regenerative by design</p>
+  </div>
+</div>
 
 <!-- footer -->
 <footer>
