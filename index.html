@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>undrstory — what's your undrstory?</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231F2A1C'/><text y='.9em' x='50%' text-anchor='middle' font-size='62' font-family='Georgia,serif' fill='%23A3B18A' dy='0.1em'>u</text></svg>">
-<meta name="description" content="the thing I keep seeing — in every organization, at every stage — is the same pattern. performative busyness mistaken for momentum. undrstory finds what's actually running your business.">
-<meta property="og:title" content="undrstory — what's your undrstory?">
-<meta property="og:description" content="the thing I keep seeing — in every organization, at every stage — is the same pattern. performative busyness mistaken for momentum. undrstory finds what's actually running your business.">
+<meta name="description" content="most people look at the canopy. we read the roots.">
+<meta property="og:title" content="undrstory">
+<meta property="og:description" content="most people look at the canopy. we read the roots.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://undrstory.ink">
 <meta name="twitter:card" content="summary_large_image">
@@ -83,7 +83,6 @@ nav.scrolled {
   background: var(--sage-light);
   padding: 0.45rem 1.2rem;
   border-radius: 2px;
-  opacity: 1;
   transition: background 0.2s;
 }
 .nav-links .nav-cta:hover { background: var(--sage); }
@@ -96,9 +95,7 @@ nav.scrolled {
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
 }
-.hero-image {
-  position: relative;
-}
+.hero-image { position: relative; }
 .hero-image::before {
   content: '';
   position: absolute;
@@ -141,21 +138,22 @@ nav.scrolled {
   letter-spacing: -0.04em;
 }
 .hero-divider { width:2.5rem; height:1px; background:var(--sage); margin-bottom:2rem; }
-.hero-body {
-  font-family: var(--sans);
-  font-size: 1rem;
-  font-weight: 300;
-  color: rgba(240,235,224,0.78);
-  line-height: 1.9;
-  margin-bottom: 3rem;
-}
-.hero-body p {
-  margin-bottom: 1rem;
-}
-.hero-body p:last-child { margin-bottom: 0; }
-.hero-body strong {
+.hero-tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
   font-weight: 400;
-  color: rgba(240,235,224,0.95);
+  color: rgba(240,235,224,0.88);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+.hero-sub {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(240,235,224,0.45);
+  line-height: 1.85;
+  margin-bottom: 3rem;
 }
 .hero-actions { display:flex; gap:2rem; align-items:center; }
 .btn-sage {
@@ -187,165 +185,164 @@ nav.scrolled {
 }
 .btn-text:hover { color: rgba(240,235,224,0.85); border-color: rgba(240,235,224,0.5); }
 
-/* ── MIRROR SECTION ── */
-#mirror {
-  background: var(--forest);
-  padding: 7rem 3.5rem;
-}
-.mirror-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-.mirror-label {
-  font-family: var(--sans);
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--sage);
-  margin-bottom: 4rem;
-  display: block;
-}
-.mirror-statement {
-  padding: 2.8rem 0;
-  border-top: 1px solid rgba(163,177,138,0.15);
-}
-.mirror-statement:first-of-type {
-  border-top: none;
-  padding-top: 0;
-}
-.mirror-statement:last-of-type {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-.mirror-statement p {
-  font-family: var(--serif);
-  font-size: clamp(1.1rem, 2vw, 1.6rem);
-  font-weight: 400;
-  color: rgba(240,235,224,0.85);
-  line-height: 1.4;
-  letter-spacing: -0.02em;
-}
-.mirror-statement p em {
-  font-style: italic;
-  color: var(--sage-light);
-}
-.mirror-closer {
-  font-family: var(--sans);
-  font-size: 0.9rem;
-  font-weight: 300;
-  font-style: italic;
-  color: var(--sage);
-  margin-top: 3.5rem;
-  display: block;
-  letter-spacing: 0.04em;
-}
-
-/* ── CANOPY LINE ── */
-.canopy-line {
-  background: var(--forest);
-  padding: 3rem 3.5rem;
-  text-align: center;
-}
-.canopy-line p {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
-  color: var(--sage-light);
-  line-height: 1.6;
-}
-
 /* ── MISSION STRIP ── */
 .mission-strip {
   background: var(--mid-green);
-  padding: 1.5rem 3.5rem;
+  padding: 2rem 3.5rem;
   text-align: center;
 }
 .mission-strip p {
   font-family: var(--sans);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 300;
-  color: var(--bone);
-  line-height: 1.7;
-  max-width: 900px;
+  color: rgba(240,235,224,0.82);
+  line-height: 1.8;
+  max-width: 860px;
   margin: 0 auto;
 }
 
-/* ── SECTION LABEL ── */
-.section-label {
-  font-family: var(--sans);
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--moss);
-  margin-bottom: 1.8rem;
+/* ── STORIES ── */
+#stories {
+  background: var(--forest);
+  padding: 7rem 3.5rem;
 }
-
-/* ── UNDRSTORY ── */
-#undrstory {
-  position: relative;
-  padding: 9rem 3.5rem;
-  overflow: hidden;
-}
-#undrstory::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('tunnel.jpeg') center center / cover no-repeat;
-  z-index: 0;
-}
-#undrstory::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(8, 14, 6, 0.85);
-  z-index: 1;
-}
-.undrstory-inner {
-  position: relative;
-  z-index: 2;
-  max-width: 640px;
-  margin: 0 auto;
-  text-align: center;
-}
-.undrstory-section-label {
+.stories-inner { max-width: 860px; margin: 0 auto; }
+.stories-label {
   font-family: var(--sans);
   font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--sage);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
 }
-.undrstory-body p {
-  font-family: var(--sans);
-  font-size: 1.05rem;
-  font-weight: 300;
-  color: rgba(240,235,224,0.82);
-  line-height: 2;
-  margin-bottom: 1.6rem;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
-}
-.undrstory-body p:last-child { margin-bottom: 0; }
-.undrstory-body em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--sage-light); }
-.undrstory-closer {
+.stories-intro {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 1.1rem;
-  color: var(--sage-light);
-  display: block;
-  margin-top: 2.5rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid rgba(163,177,138,0.25);
+  font-size: 1rem;
+  color: rgba(240,235,224,0.45);
   line-height: 1.7;
+  margin-bottom: 3.5rem;
+}
+.accordion-item {
+  border-top: 1px solid rgba(163,177,138,0.15);
+}
+.accordion-item:last-of-type {
+  border-bottom: 1px solid rgba(163,177,138,0.15);
+}
+.accordion-trigger {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1.8rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  text-align: left;
+  transition: background 0.2s;
+}
+.accordion-trigger:hover {
+  background: rgba(163,177,138,0.04);
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  margin-left: -0.8rem;
+  margin-right: -0.8rem;
+}
+.accordion-trigger:hover .accordion-title { color: var(--bone); }
+.accordion-trigger:hover .accordion-arrow { opacity: 1; }
+.accordion-title {
+  font-family: var(--serif);
+  font-size: clamp(1rem, 1.8vw, 1.18rem);
+  font-weight: 500;
+  color: rgba(240,235,224,0.72);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  transition: color 0.2s;
+  border-bottom: 1px solid rgba(163,177,138,0.2);
+  padding-bottom: 1px;
+}
+.accordion-item.open .accordion-title {
+  color: var(--bone);
+  border-bottom-color: transparent;
+}
+.accordion-hint {
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage);
+  opacity: 0.5;
+  margin-top: 0.35rem;
+  display: block;
+  transition: opacity 0.2s;
+}
+.accordion-trigger:hover .accordion-hint { opacity: 0.9; }
+.accordion-item.open .accordion-hint { display: none; }
+.accordion-arrow {
+  font-size: 1.4rem;
+  color: var(--sage);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, opacity 0.2s;
+  opacity: 0.55;
+  font-family: var(--sans);
+  font-weight: 200;
+  line-height: 1;
+  width: 28px;
+  text-align: center;
+}
+.accordion-item.open .accordion-arrow {
+  transform: rotate(45deg);
+  opacity: 1;
+}
+.accordion-body {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.45s ease;
+}
+.accordion-body-inner { padding-bottom: 2.5rem; padding-top: 0.5rem; }
+.accordion-body-inner p {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: rgba(240,235,224,0.68);
+  line-height: 1.95;
+  margin-bottom: 1rem;
+}
+.accordion-body-inner p:last-child { margin-bottom: 0; }
+.accordion-body-inner em {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--sage-light);
+}
+.accordion-closing {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--sage-light);
+  line-height: 1.7;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(163,177,138,0.12);
+  display: block;
+}
+.stories-footer {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: rgba(240,235,224,0.55);
+  margin-top: 3.5rem;
+  line-height: 1.6;
 }
 
 /* ── FOREST STRIP ── */
 #forest-strip {
   background: url('forest.jpeg') center center / cover no-repeat;
   position: relative;
-  padding: 6rem 3.5rem;
+  padding: 7rem 3.5rem;
   text-align: center;
 }
 #forest-strip::before {
@@ -354,14 +351,14 @@ nav.scrolled {
   inset: 0;
   background: rgba(10,16,8,0.72);
 }
-.forest-strip-inner { position:relative; z-index:1; max-width:800px; margin:0 auto; }
+.forest-strip-inner { position:relative; z-index:1; max-width:700px; margin:0 auto; }
 .forest-quote {
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  font-size: clamp(1.5rem, 2.8vw, 2.3rem);
   font-weight: 400;
   color: var(--bone);
-  line-height: 1.55;
+  line-height: 1.5;
   margin-bottom: 1.5rem;
 }
 .forest-sublabel {
@@ -374,58 +371,69 @@ nav.scrolled {
 }
 
 /* ── BUILT ALONGSIDE ── */
-#alongside { background: var(--forest); padding: 2.8rem 3.5rem; }
-.alongside-inner {
+#alongside { background: var(--bone); padding: 0 3.5rem 5rem; }
+.alongside-strip {
   max-width: 1100px;
   margin: 0 auto;
+  border-top: 1px solid rgba(31,42,28,0.12);
+  border-bottom: 1px solid rgba(31,42,28,0.12);
+  padding: 1.8rem 0;
   display: flex;
-  align-items: flex-start;
-  gap: 3rem;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.5rem;
 }
-.alongside-label {
+.alongside-strip-label {
   font-family: var(--sans);
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(240,235,224,0.3);
+  color: var(--moss);
+  opacity: 0.5;
   white-space: nowrap;
-  padding-top: 0.3rem;
-  min-width: 130px;
+  flex-shrink: 0;
 }
-.alongside-companies { display:flex; gap:0; flex-wrap:wrap; flex:1; }
-.alongside-company { padding: 0 2.5rem; border-left: 1px solid rgba(240,235,224,0.1); }
-.alongside-company:first-child { padding-left:0; border-left:none; }
-.alongside-company strong {
+.alongside-strip-divider {
+  width: 1px;
+  height: 1rem;
+  background: rgba(31,42,28,0.15);
+  flex-shrink: 0;
+}
+.alongside-strip-names {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  opacity: 0.65;
+  letter-spacing: 0.04em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.alongside-entry {
   display: block;
-  font-family: var(--sans);
-  font-size: 0.95rem;
+}
+.alongside-entry strong {
   font-weight: 600;
-  color: var(--bone);
-  margin-bottom: 0.15rem;
+  color: var(--charcoal);
+  opacity: 1;
 }
-.alongside-company span {
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  font-weight: 300;
-  font-style: italic;
-  color: rgba(240,235,224,0.4);
-}
-.alongside-others {
-  font-family: var(--sans);
-  font-size: 0.8rem;
-  font-weight: 300;
-  font-style: italic;
-  color: rgba(240,235,224,0.3);
-  width: 100%;
-  margin-top: 1.2rem;
-}
+
 
 /* ── OFFERINGS ── */
 #offerings { background: var(--bone); padding: 7rem 3.5rem; }
 .offerings-inner { max-width: 1100px; margin: 0 auto; }
 .offerings-header { margin-bottom: 3.5rem; }
+.section-label {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin-bottom: 1.8rem;
+  display: block;
+}
 .offerings-headline {
   font-family: var(--serif);
   font-size: clamp(2.4rem, 4vw, 3.8rem);
@@ -436,13 +444,7 @@ nav.scrolled {
   margin-bottom: 1rem;
 }
 .offerings-tabs { display:flex; gap:0.5rem; margin-bottom:0.8rem; flex-wrap:wrap; align-items:center; }
-.offerings-tab-arrow {
-  font-family: var(--sans);
-  font-size: 1rem;
-  color: var(--moss);
-  opacity: 0.5;
-  padding: 0 0.3rem;
-}
+.offerings-tab-arrow { font-family: var(--sans); font-size: 1rem; color: var(--moss); opacity: 0.5; padding: 0 0.3rem; }
 .offering-tab {
   font-family: var(--sans);
   font-size: 0.68rem;
@@ -463,9 +465,7 @@ nav.scrolled {
   font-style: italic;
   font-size: 0.92rem;
   color: var(--moss);
-  margin-bottom: 0;
 }
-
 .offering-row {
   display: grid;
   grid-template-columns: 260px 1fr 170px;
@@ -475,7 +475,6 @@ nav.scrolled {
   align-items: start;
 }
 .offering-row:last-of-type { border-bottom: 1px solid rgba(31,42,28,0.1); }
-
 .offering-row-card {
   background: #ffffff;
   border: 1px solid rgba(31,42,28,0.07);
@@ -487,7 +486,6 @@ nav.scrolled {
   align-items: start;
   margin: 0 -0.5rem;
 }
-
 .offering-type-label {
   font-family: var(--sans);
   font-size: 0.62rem;
@@ -522,7 +520,6 @@ nav.scrolled {
   line-height: 2.2;
   text-align: right;
 }
-
 .offering-body p {
   font-family: var(--sans);
   font-size: 0.92rem;
@@ -540,7 +537,6 @@ nav.scrolled {
   margin-top: 0.8rem;
   display: block;
 }
-
 .gt-body p {
   font-family: var(--sans);
   font-size: 0.92rem;
@@ -573,14 +569,7 @@ nav.scrolled {
   align-items: flex-start;
 }
 .offering-results li:last-child { border-bottom: none; }
-.offering-results li::before {
-  content: '→';
-  color: var(--moss);
-  font-size: 0.78rem;
-  margin-top: 0.15rem;
-  flex-shrink: 0;
-}
-
+.offering-results li::before { content: '→'; color: var(--moss); font-size: 0.78rem; margin-top: 0.15rem; flex-shrink: 0; }
 .offering-row-plain {
   display: grid;
   grid-template-columns: 260px 1fr 170px;
@@ -588,13 +577,8 @@ nav.scrolled {
   padding: 3rem 0;
   align-items: start;
 }
-
 .tier-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1rem; }
-.tier-card {
-  border: 1px solid rgba(31,42,28,0.1);
-  padding: 1.2rem;
-  border-radius: 2px;
-}
+.tier-card { border: 1px solid rgba(31,42,28,0.1); padding: 1.2rem; border-radius: 2px; }
 .tier-name {
   font-family: var(--sans);
   font-size: 0.62rem;
@@ -619,7 +603,6 @@ nav.scrolled {
   opacity: 0.7;
   line-height: 1.55;
 }
-
 .offering-footer-note {
   font-family: var(--sans);
   font-size: 0.78rem;
@@ -714,11 +697,7 @@ nav.scrolled {
   gap: 2px;
   background: rgba(240,235,224,0.06);
 }
-.testimonial {
-  background: var(--olive);
-  padding: 2.8rem 3rem;
-  position: relative;
-}
+.testimonial { background: var(--olive); padding: 2.8rem 3rem; position: relative; }
 .testimonial-quote-mark {
   font-family: var(--serif);
   font-size: 5rem;
@@ -728,7 +707,6 @@ nav.scrolled {
   position: absolute;
   top: 1.8rem;
   left: 2.8rem;
-  font-style: normal;
 }
 .testimonial-text {
   font-family: var(--serif);
@@ -751,27 +729,17 @@ nav.scrolled {
 /* ── ABOUT ── */
 #about { background: var(--bone); padding: 7rem 3.5rem; }
 .about-inner { max-width: 1100px; margin: 0 auto; }
-
 .about-top {
   display: grid;
   grid-template-columns: 380px 1fr;
   gap: 5rem;
   align-items: start;
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
 }
-
-.about-portrait-wrap {
-  position: relative;
-  display: inline-block;
-}
+.about-portrait-wrap { position: relative; display: inline-block; }
 .about-portrait-wrap::before {
   content: '';
   position: absolute;
-  top: 12px;
-  left: 12px;
-  right: -12px;
-  bottom: -12px;
+  top: 12px; left: 12px; right: -12px; bottom: -12px;
   border: 2px solid var(--clay);
   border-radius: 2px;
   z-index: 0;
@@ -786,7 +754,6 @@ nav.scrolled {
   object-position: center top;
   border-radius: 2px;
 }
-
 .about-section-label {
   font-family: var(--sans);
   font-size: 0.65rem;
@@ -807,12 +774,7 @@ nav.scrolled {
   align-items: center;
   gap: 0.7rem;
 }
-.about-linkedin {
-  display: inline-flex;
-  align-items: center;
-  opacity: 0.22;
-  transition: opacity 0.2s;
-}
+.about-linkedin { display: inline-flex; align-items: center; opacity: 0.22; transition: opacity 0.2s; }
 .about-linkedin:hover { opacity: 0.6; }
 .about-linkedin svg { width:18px; height:18px; fill:var(--forest); }
 .about-title {
@@ -843,24 +805,6 @@ nav.scrolled {
   display: block;
 }
 
-.about-bottom {}
-.about-credentials-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3.5rem;
-}
-.about-cred-col p {
-  font-family: var(--sans);
-  font-size: 0.88rem;
-  font-weight: 300;
-  color: var(--charcoal);
-  opacity: 0.62;
-  line-height: 1.85;
-  margin-bottom: 0.8rem;
-}
-.about-cred-col p:last-child { margin-bottom: 0; }
-.about-cred-col em { font-style: italic; }
-
 /* ── CONTACT ── */
 #contact { background: var(--olive); padding: 7rem 3.5rem; }
 .contact-inner { max-width: 680px; margin: 0 auto; }
@@ -878,7 +822,6 @@ nav.scrolled {
   font-family: var(--serif);
   font-style: italic;
   font-size: 1.05rem;
-  font-weight: 400;
   color: var(--sage-light);
   text-align: center;
   margin-bottom: 3rem;
@@ -890,7 +833,6 @@ nav.scrolled {
   border: 1px solid rgba(240,235,224,0.12);
   color: rgba(240,235,224,0.82);
   font-family: var(--sans);
-  font-style: normal;
   font-weight: 300;
   font-size: 0.92rem;
   padding: 0.95rem 1.2rem;
@@ -901,7 +843,7 @@ nav.scrolled {
   -webkit-appearance: none;
 }
 .form-select { cursor: pointer; }
-.form-select option { background: var(--forest); color: var(--bone); font-style: normal; }
+.form-select option { background: var(--forest); color: var(--bone); }
 .form-select:focus, .form-input:focus, .form-textarea:focus {
   border-color: var(--sage);
   background: rgba(240,235,224,0.09);
@@ -936,7 +878,6 @@ nav.scrolled {
 .form-submit:hover { background: var(--sage); }
 .form-note {
   font-family: var(--sans);
-  font-style: normal;
   font-weight: 300;
   font-size: 0.75rem;
   color: rgba(240,235,224,0.38);
@@ -983,14 +924,12 @@ footer {
   #hero { grid-template-columns:1fr; }
   .hero-image { min-height:40vh; }
   .hero-content { padding:5rem 2rem 4rem; }
-  .mission-strip { padding:1.2rem 1.5rem; }
-  #mirror { padding:4rem 1.5rem; }
-  #undrstory { padding:5rem 1.5rem; }
-  #forest-strip { padding:4rem 1.5rem; }
-  #alongside { padding:2rem 1.5rem; }
-  .alongside-inner { flex-direction:column; gap:1.2rem; }
-  .alongside-company { border-left:none; padding-left:0; border-top:1px solid rgba(240,235,224,0.08); padding-top:1rem; }
-  .alongside-company:first-child { border-top:none; padding-top:0; }
+  .mission-strip { padding:1.5rem; }
+  #stories { padding:5rem 1.5rem; }
+  .accordion-trigger:hover { padding-left:0; padding-right:0; margin-left:0; margin-right:0; }
+  #forest-strip { padding:5rem 1.5rem; }
+  #alongside { padding: 0 1.5rem 4rem; }
+  .alongside-strip { flex-wrap: wrap; gap: 1rem; }
   #offerings { padding:5rem 1.5rem; }
   .offering-row, .offering-row-card, .offering-row-plain { grid-template-columns:1fr; gap:1.5rem; }
   .offering-row-card { padding:2rem; margin:0; }
@@ -1003,7 +942,6 @@ footer {
   #about { padding:5rem 1.5rem; }
   .about-top { grid-template-columns:1fr; gap:2.5rem; }
   .about-portrait-wrap { max-width:240px; }
-  .about-credentials-grid { grid-template-columns:1fr; gap:2rem; }
   #contact { padding:5rem 1.5rem; }
   footer { padding:1.5rem; flex-direction:column; gap:0.7rem; text-align:center; }
 }
@@ -1028,51 +966,12 @@ footer {
     <p class="hero-eyebrow">strategic advisory</p>
     <h1 class="hero-wordmark">undrstory</h1>
     <div class="hero-divider"></div>
-    <div class="hero-body">
-      <p>the same pattern. in every organization. at every stage.</p>
-      <p>big investments. hardworking teams. months of work.</p>
-      <p><strong>performative busyness mistaken for momentum.</strong></p>
-      <p>someone is supposed to be holding the whole picture.</p>
-      <p><strong>nobody is.</strong></p>
-    </div>
+    <p class="hero-tagline">most people look at the canopy.<br>we read the roots.</p>
+    <p class="hero-sub">the truth, delivered well, changes everything.<br>direct by nature. always on your side.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-sage">begin here</a>
       <a href="#offerings" class="btn-text">see the work</a>
     </div>
-    <p style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(163,177,138,0.2);font-family:var(--serif);font-style:italic;font-size:0.88rem;color:rgba(240,235,224,0.45);line-height:1.9;">most people look at the canopy. we read the roots.<br>the truth, delivered well, changes everything.<br>direct by nature. always on your side.</p>
-  </div>
-</section>
-
-<!-- mirror section -->
-<section id="mirror">
-  <div class="mirror-inner">
-    <span class="mirror-label reveal">you might be here if</span>
-
-    <div class="mirror-statement reveal">
-      <p>you're scaling faster than your current structure can hold.</p>
-    </div>
-
-    <div class="mirror-statement reveal">
-      <p>you're about to sell, acquire, or make a bet <em>you can't easily undo.</em></p>
-    </div>
-
-    <div class="mirror-statement reveal">
-      <p>you're heading into the next phase and not fully confident the foundation beneath it is solid.</p>
-    </div>
-
-    <div class="mirror-statement reveal">
-      <p>you've been hitting the same wall for a while — and the last few attempts to break through it haven't worked.</p>
-    </div>
-
-    <div class="mirror-statement reveal">
-      <p>you've done the offsites. the sprints. the restructures. the business reviews. <em>you're still waiting for something to actually shift.</em></p>
-    </div>
-
-    <div class="mirror-statement reveal">
-      <p>you don't need another framework. you need someone with no stake in the answer — just fully on your side.</p>
-    </div>
-
-    <span class="mirror-closer reveal">most people look at the canopy. we read the roots.</span>
   </div>
 </section>
 
@@ -1081,36 +980,102 @@ footer {
   <p>undrstory works where most advisors don't go — beneath the strategy, beneath the narrative, into the dynamics that are actually running your business.</p>
 </div>
 
-<!-- the undrstory -->
-<section id="undrstory">
-  <div class="undrstory-inner">
-    <p class="undrstory-section-label">the undrstory</p>
-    <div class="undrstory-body reveal">
-      <p>you've been holding a lot.</p>
-      <p>leading an organization forward takes everything you have. people in motion, projects in motion — and the needle still isn't moving the way it should.</p>
-      <p>you don't have to have it figured out before you reach out.</p>
-      <p>undrstory comes in and does what nobody inside has the mandate or the vantage point to do — asks the real questions, reads the whole system, and brings you what's actually there. clearly. directly. in a way that stops the spiral instead of starting one.</p>
-      <p>we read how the pieces connect, where the gaps are, what's driving the team beneath the surface. we help reframe the strategy, the conversations, sometimes the goal itself.</p>
-      <span class="undrstory-closer">the truth, delivered well, changes everything.</span>
+<!-- stories -->
+<section id="stories">
+  <div class="stories-inner">
+    <span class="stories-label reveal">the work, in practice</span>
+    <p class="stories-intro reveal">these are real situations. no one in them was intentionally ignoring what was there. it's usually an undercurrent — running quietly beneath the surface, shaping everything, waiting to be acknowledged.</p>
+
+    <div class="accordion-item reveal">
+      <button class="accordion-trigger" aria-expanded="false">
+        <span>
+          <span class="accordion-title">when the truth gave someone permission to stop</span>
+          <span class="accordion-hint">read the story</span>
+        </span>
+        <span class="accordion-arrow">+</span>
+      </button>
+      <div class="accordion-body">
+        <div class="accordion-body-inner">
+          <p>they were carrying something real inside a fast-moving company. they could see the problems clearly — and kept trying to surface them. reframing them, presenting them differently, finding the angle that might finally make someone care. maybe this format. maybe this meeting. maybe this time.</p>
+          <p>every week they left a little more defeated.</p>
+          <p>it wasn't going to shift. not because they were wrong — they weren't. but the capacity to see it, and the will to fix it, simply wasn't there.</p>
+          <p>once they could see that clearly, they stopped trying to change it. they left. six months later they were giddy.</p>
+          <p>the colleague who stayed is still in it.</p>
+          <span class="accordion-closing">sometimes the truth is: this isn't going to change. and knowing that — really knowing it — is the thing that sets you free.</span>
+        </div>
+      </div>
     </div>
+
+    <div class="accordion-item reveal reveal-delay-1">
+      <button class="accordion-trigger" aria-expanded="false">
+        <span>
+          <span class="accordion-title">when the truth was spoken three times and still couldn't land</span>
+          <span class="accordion-hint">read the story</span>
+        </span>
+        <span class="accordion-arrow">+</span>
+      </button>
+      <div class="accordion-body">
+        <div class="accordion-body-inner">
+          <p>two people building something together. same words, same stated vision. but every time they left a meeting, they were walking toward different things — and one of them kept naming it.</p>
+          <p><em>I don't think we're holding the same vision. I think we should part ways.</em></p>
+          <p>three times: <em>no. let's keep trying.</em></p>
+          <p>the split happened anyway — forced by the one party who hadn't been heard. messier than it needed to be.</p>
+          <p>the longer the truth is denied, the longer you wait for the other party to catch up. the more defeated you feel.</p>
+          <p>three months later: <em>I finally see what you were saying.</em></p>
+          <span class="accordion-closing">the truth doesn't stop being true because someone isn't ready for it yet. but you're the one waiting — and you're the one who feels it.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item reveal reveal-delay-2">
+      <button class="accordion-trigger" aria-expanded="false">
+        <span>
+          <span class="accordion-title">when the truth landed and something moved</span>
+          <span class="accordion-hint">read the story</span>
+        </span>
+        <span class="accordion-arrow">+</span>
+      </button>
+      <div class="accordion-body">
+        <div class="accordion-body-inner">
+          <p>the highest-priority project in the company. a strict deadline. and every week, the person championing its importance was focused elsewhere — on minor projects that filled their plate but had no bearing on what actually mattered right now.</p>
+          <p>it got named directly: <em>if this is the priority you say it is, I need you to hand these off and focus on the real one. I need you here.</em></p>
+          <p>defensiveness first. then, within days: <em>you're right. I'm here.</em></p>
+          <p>the goal was achieved. the deadline hit.</p>
+          <span class="accordion-closing">when someone is ready — when the conditions exist for the truth to land — things move fast. that's what this work is for.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item reveal reveal-delay-3">
+      <button class="accordion-trigger" aria-expanded="false">
+        <span>
+          <span class="accordion-title">when the truth arrived anyway, and still got bypassed</span>
+          <span class="accordion-hint">read the story</span>
+        </span>
+        <span class="accordion-arrow">+</span>
+      </button>
+      <div class="accordion-body">
+        <div class="accordion-body-inner">
+          <p>the fault line was visible from week three. two teams whose work was deeply symbiotic, operating in near-total isolation. broken from the start.</p>
+          <p>the concerns got raised — in meetings, in writing, with specific questions that needed answers.</p>
+          <p><em>that's a really well-articulated question. I need to digest it and get back to you.</em></p>
+          <p>they never got back.</p>
+          <p>months later, the proof arrived — a founder stepping down from their executive role. the exact pressure point named at the beginning. the response: it was honorable. this is normal for scaling companies.</p>
+          <p>they couldn't acknowledge that the cracks their team had been quietly holding together for months were the same ones named from the start. the truth had arrived. it just couldn't be spoken out loud.</p>
+          <span class="accordion-closing">the question was never just: is this true? it was: are they ready to act on it? can they acknowledge it even when it arrives? and what do you want to do, once you know?</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="stories-footer reveal">the truth has its own timeline. are you ready?</p>
   </div>
 </section>
 
-<!-- built alongside -->
-<div id="alongside">
-  <div class="alongside-inner">
-    <p class="alongside-label">built alongside</p>
-    <div class="alongside-companies">
-      <div class="alongside-company">
-        <strong>Bird</strong>
-        <span>fastest startup ever to reach unicorn status</span>
-      </div>
-      <div class="alongside-company">
-        <strong>Function Health</strong>
-        <span>fastest-growing health platform</span>
-      </div>
-    </div>
-    <p class="alongside-others">+ 7 others across tech, wellness, nonprofit &amp; hospitality</p>
+<!-- forest strip -->
+<div id="forest-strip">
+  <div class="forest-strip-inner reveal">
+    <p class="forest-quote">in a forest, the understory holds more life than the canopy above it. the most important growth has always happened beneath what's visible.</p>
+    <p class="forest-sublabel">regenerative by design</p>
   </div>
 </div>
 
@@ -1118,7 +1083,7 @@ footer {
 <section id="offerings">
   <div class="offerings-inner">
     <div class="offerings-header reveal">
-      <p class="section-label">the work</p>
+      <span class="section-label">the work</span>
       <h2 class="offerings-headline">how we work together</h2>
       <div class="offerings-tabs">
         <a href="#ground-truth" class="offering-tab">the ground truth</a>
@@ -1137,7 +1102,7 @@ footer {
       <div class="offering-body">
         <p>a two-hour strategic call for leaders who want a read before committing to the next move. you share the view from the top. we read what's underneath.</p>
         <p>requires pre-work submitted before the call — the more honest, the better the read. deductible in full from the ground truth if you decide to go deeper.</p>
-        <span class="offering-italic-note">for founders who want a read before committing to the full engagement. the biggest impact lives in the ground truth.</span>
+        <span class="offering-italic-note">for founders who want a read before committing to the full engagement.</span>
       </div>
       <div>
         <p class="offering-meta-label">2 hr session</p>
@@ -1154,14 +1119,15 @@ footer {
       <div class="gt-body">
         <p style="font-family:var(--serif);font-style:italic;font-size:0.88rem;color:var(--moss);margin-bottom:1rem;">one bad hire, one misaligned launch, one planning cycle built on the wrong assumption costs more than this.</p>
         <p>a full immersion into what's actually happening beneath the surface of your business. we sit in the rooms, meet the people, read the currents, and name what no one else has named.</p>
-        <p>this is not an audit. it is a read — of the dynamics, the gaps, what the team knows but hasn't had the space to surface, and the hidden thread connecting what's not working across every corner of the business.</p>
+        <p>this is not an audit. it is a read — of the dynamics, the gaps, what the team knows but hasn't had the space to surface, and the hidden thread connecting what's not working.</p>
         <p class="offering-results-label">this often results in</p>
         <ul class="offering-results">
-          <li>a calmer, clearer founder who can actually lead from that place</li>
-          <li>renewed momentum and energy in the business</li>
-          <li>clearer direction across teams and projects</li>
-          <li>employees who feel the shift and move differently</li>
-          <li>progress that finally feels collaborative</li>
+          <li>a weight lifted — the kind you didn't realize you'd been carrying until it's gone</li>
+          <li>clarity on what to actually do next, and the steadiness to do it</li>
+          <li>a founder who can lead from a grounded place again</li>
+          <li>the fog lifting — on the business, on the team, on what's been stuck</li>
+          <li>feeling genuinely supported, maybe for the first time in a while</li>
+          <li>momentum that doesn't feel forced</li>
         </ul>
         <span class="offering-italic-note">duration adjusts to complexity. one client at a time — always.</span>
       </div>
@@ -1199,7 +1165,7 @@ footer {
       </div>
     </div>
 
-    <p class="offering-footer-note">for early-stage founders and executives looking for ongoing strategic partnership: board and advisor arrangements considered on a case-by-case basis. structured separately with equity participation.</p>
+
   </div>
 </section>
 
@@ -1213,15 +1179,15 @@ footer {
         <em>but you will thank<br>me later.</em>
       </h2>
     </div>
-      <div class="promise-right reveal reveal-delay-2">
-        <p>sometimes the read lands the moment it's delivered. relief. recognition. the feeling, finally named.</p>
-        <p>sometimes it doesn't. the first thing that comes up is resistance — because what's being named touches something you've built, believed in, or held as true for a long time. that's not defensiveness. that's just what it feels like when something real arrives before you're ready to let it in.</p>
-        <p>the truth has its own timeline.</p>
-        <div class="promise-offer">
-          <p>when it lands — and it will — come back. i'll give you a complimentary one-hour call to look at it together with fresh eyes. not to say I told you so. to go deeper now that you're ready.</p>
-        </div>
-        <a href="#contact" style="display:inline-block;margin-top:2rem;font-family:var(--sans);font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-light);text-decoration:none;border-bottom:1px solid rgba(196,206,184,0.3);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;" onmouseover="this.style.color='var(--bone)';this.style.borderColor='rgba(240,235,224,0.5)'" onmouseout="this.style.color='var(--sage-light)';this.style.borderColor='rgba(196,206,184,0.3)'">ready for the read → begin here</a>
+    <div class="promise-right reveal reveal-delay-2">
+      <p>sometimes the read lands the moment it's delivered. relief. recognition. the feeling, finally named.</p>
+      <p>sometimes it doesn't. the first thing that comes up is resistance — because what's being named touches something you've built, believed in, or held as true for a long time.</p>
+      <p>the truth has its own timeline.</p>
+      <div class="promise-offer">
+        <p>when it lands — and it will — come back. i'll give you a complimentary one-hour call to look at it together with fresh eyes. not to say I told you so. to go deeper now that you're ready.</p>
       </div>
+      <a href="#contact" style="display:inline-block;margin-top:2rem;font-family:var(--sans);font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-light);text-decoration:none;border-bottom:1px solid rgba(196,206,184,0.3);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;" onmouseover="this.style.color='var(--bone)';this.style.borderColor='rgba(240,235,224,0.5)'" onmouseout="this.style.color='var(--sage-light)';this.style.borderColor='rgba(196,206,184,0.3)'">ready for the read → begin here</a>
+    </div>
   </div>
 </section>
 
@@ -1286,6 +1252,19 @@ footer {
   </div>
 </section>
 
+<!-- built alongside -->
+<div id="alongside">
+  <div class="alongside-strip">
+    <span class="alongside-strip-label">previously embedded in</span>
+    <span class="alongside-strip-divider"></span>
+    <span class="alongside-strip-names">
+      <span class="alongside-entry"><strong>Bird</strong> &nbsp;·&nbsp; fastest startup ever to reach unicorn status</span>
+      <span class="alongside-entry"><strong>Function Health</strong> &nbsp;·&nbsp; fastest-growing health platform</span>
+      <span class="alongside-entry">and organizations spanning historic preservation, hospitality, community wellness, CPG & membership — from beloved local institutions to venture-backed tech</span>
+    </span>
+  </div>
+</div>
+
 <!-- contact -->
 <section id="contact">
   <div class="contact-inner">
@@ -1306,27 +1285,19 @@ footer {
       <input type="text" name="company" placeholder="your company / what you're building" class="form-input">
       <textarea name="message" placeholder="what's the moment you're in right now?" class="form-textarea"></textarea>
       <button type="submit" class="form-submit">send it →</button>
-      <p class="form-note">not sure where to start? email <a href="mailto:ally@undrstory.ink">ally@undrstory.ink</a> — what's drawing you to this work and we'll figure out together if it's a fit.</p>
+      <p class="form-note">not sure where to start? email <a href="mailto:ally@undrstory.ink">ally@undrstory.ink</a> — tell me what's drawing you to this work and we'll figure out together if it's a fit.</p>
       <p class="form-small">every message read personally. you'll hear back within 48 hours.</p>
       <p class="form-small" style="margin-top:1rem;opacity:0.5;font-style:italic;">direct by nature. always on your side.</p>
     </form>
   </div>
 </section>
 
-<!-- forest strip -->
-<div id="forest-strip">
-  <div class="forest-strip-inner">
-    <p class="forest-quote">in a forest, the understory holds more life than the canopy above it. the most important growth has always happened beneath what's visible.</p>
-    <p class="forest-sublabel">regenerative by design</p>
-  </div>
-</div>
-
 <!-- footer -->
 <footer>
   <span class="footer-logo">undrstory</span>
   <a href="mailto:ally@undrstory.ink" class="footer-email">ally@undrstory.ink</a>
   <div style="display:flex;align-items:center;gap:1.2rem;">
-    <a href="https://www.linkedin.com/company/117304002/" target="_blank" class="footer-linkedin" aria-label="undrstory on LinkedIn">
+    <a href="https://www.linkedin.com/company/117304002/" target="_blank" aria-label="undrstory on LinkedIn">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:16px;height:16px;fill:rgba(240,235,224,0.28);transition:fill 0.2s;" onmouseover="this.style.fill='rgba(240,235,224,0.65)'" onmouseout="this.style.fill='rgba(240,235,224,0.28)'"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
     </a>
     <p class="footer-copy">© 2026 undrstory. all rights reserved.</p>
@@ -1334,10 +1305,13 @@ footer {
 </footer>
 
 <script>
+  // nav scroll
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 60);
   });
+
+  // reveal on scroll
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -1348,6 +1322,27 @@ footer {
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
   reveals.forEach(el => observer.observe(el));
+
+  // accordion
+  document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const item = trigger.closest('.accordion-item');
+      const body = item.querySelector('.accordion-body');
+      const isOpen = item.classList.contains('open');
+
+      document.querySelectorAll('.accordion-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.accordion-body').style.maxHeight = null;
+        i.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
 </script>
 </body>
 </html>
