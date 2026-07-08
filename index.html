@@ -338,6 +338,78 @@ nav.scrolled {
   line-height: 1.6;
 }
 
+/* ── METHOD ── */
+#method { background: var(--olive); padding: 7rem 3.5rem; }
+.method-inner { max-width: 900px; margin: 0 auto; }
+.method-label {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sage-light);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+.method-headline {
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 3.4vw, 2.9rem);
+  font-weight: 600;
+  color: var(--bone);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 2.5rem;
+}
+.method-headline em { font-style: italic; color: var(--sage-light); }
+.method-lead {
+  font-family: var(--sans);
+  font-size: clamp(1.05rem, 1.7vw, 1.22rem);
+  font-weight: 300;
+  color: rgba(240,235,224,0.9);
+  line-height: 1.75;
+  margin-bottom: 3rem;
+  max-width: 760px;
+}
+.method-contrast {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(163,177,138,0.18);
+  border: 1px solid rgba(163,177,138,0.18);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+.method-col { background: var(--olive); padding: 2.2rem 2rem; }
+.method-col-label {
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.method-col.old .method-col-label { color: var(--clay); }
+.method-col.new .method-col-label { color: var(--sage); }
+.method-col p {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(240,235,224,0.62);
+}
+.method-col.new p { color: rgba(240,235,224,0.88); }
+.method-close {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  font-weight: 400;
+  color: var(--bone);
+  line-height: 1.5;
+  padding-top: 0.5rem;
+}
+.method-close .accent { color: var(--sage-light); }
+
 /* ── FOREST STRIP ── */
 #forest-strip {
   background: url('forest.jpeg') center center / cover no-repeat;
@@ -967,7 +1039,7 @@ footer {
     <h1 class="hero-wordmark">undrstory</h1>
     <div class="hero-divider"></div>
     <p class="hero-tagline">most people look at the canopy.<br>we read the roots.</p>
-    <p class="hero-sub">the truth, delivered well, changes everything.<br>direct by nature. always on your side.</p>
+    <p class="hero-sub">we trace the symptom back to where it actually began — the one-degree drift, far upstream, that everything downstream is paying for.<br>direct by nature. always on your side.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-sage">begin here</a>
       <a href="#offerings" class="btn-text">see the work</a>
@@ -977,31 +1049,31 @@ footer {
 
 <!-- mission strip -->
 <div class="mission-strip">
-  <p>undrstory works where most advisors don't go — beneath the strategy, beneath the narrative, into the dynamics that are actually running your business. the result is clarity you can build on.</p>
+  <p>undrstory works where most advisors don't go — beneath the strategy, beneath the narrative, into the dynamics that are actually running your business. not a quick fix on the nearest symptom, but a read that traces it back to where the disruption began — so the whole system comes more alive over time. the result is clarity you can build on.</p>
 </div>
 
 <!-- stories -->
 <section id="stories">
   <div class="stories-inner">
     <span class="stories-label reveal">the work, in practice</span>
-    <p class="stories-intro reveal">these are real situations. no one in them was intentionally ignoring what was there. it's usually an undercurrent — running quietly beneath the surface, shaping everything, waiting to be acknowledged.</p>
+    <p class="stories-intro reveal">three real reads. in each, the symptom surfaced in one place — and the cause was living somewhere else entirely, in a system no one had thought to connect. some resolved. one revealed an organization that wasn't ready. that, too, is the work.</p>
 
     <div class="accordion-item reveal">
       <button class="accordion-trigger" aria-expanded="false">
         <span>
-          <span class="accordion-title">when the truth gave someone permission to stop</span>
+          <span class="accordion-title">when AI automation inverted the problem, and no one noticed</span>
           <span class="accordion-hint">read the story</span>
         </span>
         <span class="accordion-arrow">+</span>
       </button>
       <div class="accordion-body">
         <div class="accordion-body-inner">
-          <p>they were carrying something real inside a fast-moving company. they could see the problems clearly — and kept trying to surface them. reframing them, presenting them differently, finding the angle that might finally make someone care. maybe this format. maybe this meeting. maybe this time.</p>
-          <p>every week they left a little more defeated.</p>
-          <p>it wasn't going to shift. not because they were wrong — they weren't. but the capacity to see it, and the will to fix it, simply wasn't there.</p>
-          <p>once they could see that clearly, they stopped trying to change it. they left. six months later they were giddy.</p>
-          <p>the colleague who stayed is still in it.</p>
-          <span class="accordion-closing">sometimes the truth is: this isn't going to change. and knowing that — really knowing it — is the thing that sets you free.</span>
+          <p>a fast-scaling company hit a wall: support volume climbing, headcount capped, and a mandate to close the gap with automation instead of hiring. the team pushed the AI layer as far as it could go — and it absorbed the simple, repetitive questions almost entirely.</p>
+          <p>then leadership moved to scale the human layer the obvious way: add capacity at the lowest cost. cheaper hands for the overflow.</p>
+          <p>but I'd been tracking what the automation had done to the <em>shape</em> of the work. by clearing the easy tickets, it had inverted the requirement — everything still reaching a human was now the hard stuff. the remaining work didn't need more, cheaper people. it needed fewer, more skilled ones. adding low-cost capacity actively degraded the thing it was meant to fix.</p>
+          <p>and the deeper cause sat upstream, in how the systems were permissioned to talk to each other. the AI could see a little, but it couldn't reach across into the other internal tools to pull what it needed — and it certainly couldn't take an action on what it found. it was walled off from the very systems that would let it resolve anything. so it stayed stuck at <em>raise the question</em>, never <em>close the loop</em>.</p>
+          <p>the real leverage was there, in order: let the AI access the data across systems, then let it act on that data — and only then, for the genuinely complex cases left, tee them up so a skilled human could resolve them in close to a single step. not more hands at the bottom. authority at the seams.</p>
+          <span class="accordion-closing">the symptom was "we can't keep up." the reflex was to add capacity. but the automation had already changed what the work <em>was</em> — and the systems were never permissioned to let it finish the job. the fix wasn't more of anything. it was letting the systems talk, and act.</span>
         </div>
       </div>
     </div>
@@ -1009,20 +1081,19 @@ footer {
     <div class="accordion-item reveal reveal-delay-1">
       <button class="accordion-trigger" aria-expanded="false">
         <span>
-          <span class="accordion-title">when the truth was spoken three times and still couldn't land</span>
+          <span class="accordion-title">when the broken system was hiding the fault inside itself</span>
           <span class="accordion-hint">read the story</span>
         </span>
         <span class="accordion-arrow">+</span>
       </button>
       <div class="accordion-body">
         <div class="accordion-body-inner">
-          <p>two people building something together. same words, same stated vision. but every time they left a meeting, they were walking toward different things — and one of them kept naming it.</p>
-          <p><em>I don't think we're holding the same vision. I think we should part ways.</em></p>
-          <p>three times: <em>no. let's keep trying.</em></p>
-          <p>the split happened anyway — forced by the one party who hadn't been heard. messier than it needed to be.</p>
-          <p>the longer the truth is denied, the longer you wait for the other party to catch up. the more defeated you feel.</p>
-          <p>three months later: <em>I finally see what you were saying.</em></p>
-          <span class="accordion-closing">the truth doesn't stop being true because someone isn't ready for it yet. but you're the one waiting — and you're the one who feels it.</span>
+          <p>a technician flagged something small: physical units kept getting marked damaged, but when the team assessed them, nothing was wrong. most people would've written it off as noise. he had a real concern, so I looked.</p>
+          <p>I went into the usage data — reading it second by second. the damage flags all traced back to low user ratings, which usually mean something's broken. but nothing was. so I kept going. same model of unit, but that was most of the fleet, so not unique. then I watched the movement data as sessions pinged: every one of these units entered a restricted-speed zone, slowed as designed — and never came back up to speed, even after leaving the zone.</p>
+          <p>they were getting stuck slow. every user after gave a low rating. enough low ratings auto-triggered a damage flag. the units got pulled from service, generating no revenue — and this was happening at a scale no one could see, because the model was only lightly distributed, so the reports never clustered loudly enough to notice.</p>
+          <p>here's what made it invisible: the service depot sat inside a restricted-speed zone too. so when technicians tested the "damaged" units, they ran fine — because they were <em>supposed</em> to be slow there. the diagnosis was happening inside the exact condition causing the fault. the units cycled back out, got stuck again, and the loop repeated.</p>
+          <p>the real cause was a code change from weeks earlier, in a completely different system. I traced it back, and named it — publicly, in the channel reserved for major outages, which is its own kind of risk. within minutes every senior engineer and operator was in the room.</p>
+          <span class="accordion-closing">the symptom was "damaged units." the cause was a line of code in another system, hidden by the very environment built to catch it. no single team could have seen it from inside their own lane. that's the read.</span>
         </div>
       </div>
     </div>
@@ -1030,51 +1101,53 @@ footer {
     <div class="accordion-item reveal reveal-delay-2">
       <button class="accordion-trigger" aria-expanded="false">
         <span>
-          <span class="accordion-title">when the truth landed and something moved</span>
+          <span class="accordion-title">when good intent, left unexamined, turned against the mission</span>
           <span class="accordion-hint">read the story</span>
         </span>
         <span class="accordion-arrow">+</span>
       </button>
       <div class="accordion-body">
         <div class="accordion-body-inner">
-          <p>the highest-priority project in the company. a strict deadline. and every week, the person championing its importance was focused elsewhere — on minor projects that filled their plate but had no bearing on what actually mattered right now.</p>
-          <p>it got named directly: <em>if this is the priority you say it is, I need you to hand these off and focus on the real one. I need you here.</em></p>
-          <p>defensiveness first. then, within days: <em>you're right. I'm here.</em></p>
-          <p>the goal was achieved. the deadline hit.</p>
-          <span class="accordion-closing">when someone is ready — when the conditions exist for the truth to land — things move fast. that's what this work is for.</span>
+          <p>a mission-driven institution came in with a clear ask: modernize, but gently. they knew they'd drifted — structures built decades ago and never revisited — and they wanted an outside thinker to help. or so the ask went.</p>
+          <p>the surfacing problem looked like neglect. the very things the organization existed to protect had fallen into serious disrepair — ignored, worked around, quietly failing. the easy read was individual: people weren't doing their jobs.</p>
+          <p>but I traced it back to the origin. a benefit, generous when it began, had over the years fused two kinds of security into one — so the thing keeping people housed and the thing keeping them employed became the same thing. that loop had no exit. good intent, compounding one degree at a time, until it trapped the very people it was meant to support and hollowed out every incentive the organization was counting on.</p>
+          <p>and here's where the drift became undeniable: the symptom it produced now stood in direct opposition to the organization's mission. the institution built to preserve was, through its own structure, presiding over decay. the neglect wasn't the cause. it was the residue of an origin no one had re-examined in decades.</p>
+          <p>the fix worked at the source: restructure the benefit so security and employment were no longer the same lock — pay people more, and give them a real choice about whether to stay.</p>
+          <span class="accordion-closing">the read was structural, not personal — and it was accurate. but acting on it meant releasing a story the organization had told about itself for a very long time. it wasn't ready to. naming the real cause doesn't guarantee the will to change it. that, too, is a finding.</span>
         </div>
       </div>
     </div>
 
-    <div class="accordion-item reveal reveal-delay-3">
-      <button class="accordion-trigger" aria-expanded="false">
-        <span>
-          <span class="accordion-title">when the truth arrived anyway, and still got bypassed</span>
-          <span class="accordion-hint">read the story</span>
-        </span>
-        <span class="accordion-arrow">+</span>
-      </button>
-      <div class="accordion-body">
-        <div class="accordion-body-inner">
-          <p>the fault line was visible from week three. two teams whose work was deeply symbiotic, operating in near-total isolation. broken from the start.</p>
-          <p>the concerns got raised — in meetings, in writing, with specific questions that needed answers.</p>
-          <p><em>that's a really well-articulated question. I need to digest it and get back to you.</em></p>
-          <p>they never got back.</p>
-          <p>months later, the proof arrived — a founder stepping down from their executive role. the exact pressure point named at the beginning. the response: it was honorable. this is normal for scaling companies.</p>
-          <p>they couldn't acknowledge that the cracks their team had been quietly holding together for months were the same ones named from the start. the truth had arrived. it just couldn't be spoken out loud.</p>
-          <span class="accordion-closing">the question was never just: is this true? it was: are they ready to act on it? can they acknowledge it even when it arrives? and what do you want to do, once you know?</span>
-        </div>
+    <p class="stories-footer reveal">every one began as a signal no single team could read alone. the read has its own timeline. are you ready?</p>
+  </div>
+</section>
+
+<!-- method -->
+<section id="method">
+  <div class="method-inner">
+    <span class="method-label reveal">the method</span>
+    <h2 class="method-headline reveal">a company is a body.<br><em>the symptom is rarely where the cause lives.</em></h2>
+    <p class="method-lead reveal">think of the gut and the brain — two systems in a constant loop. when the signaling between them breaks down, the problem surfaces somewhere other than where it started. treat it where it shows and you miss it entirely. the systems are too entangled to read the cause off the symptom. you trace the whole relationship back to where the disruption actually began.</p>
+
+    <div class="method-contrast reveal reveal-delay-1">
+      <div class="method-col old">
+        <p class="method-col-label">how most companies operate</p>
+        <p>two teams, two problems, solved separately — as if they weren't connected. it isn't wrong. it works. but it's slower, more costly, and it doesn't hold at scale. left alone, the small misalignment compounds into something far more expensive to fix later.</p>
+      </div>
+      <div class="method-col new">
+        <p class="method-col-label">the undrstory read</p>
+        <p>full-body analysis: the two symptoms you're treating apart most likely share one source. like a flight path thrown off by a single degree, we trace back to the moment the angle shifted — and correct it there, so both problems resolve, and the next ones never form.</p>
       </div>
     </div>
 
-    <p class="stories-footer reveal">the truth has its own timeline. are you ready?</p>
+    <p class="method-close reveal reveal-delay-2">the systems only start talking again when someone names what's moving between them — <span class="accent">the correlation no single team can see from inside its own lane.</span> that's the choice: keep chasing symptoms as they surface, or find the healthier, more regenerative way to build — the one that holds as you scale.</p>
   </div>
 </section>
 
 <!-- forest strip -->
 <div id="forest-strip">
   <div class="forest-strip-inner reveal">
-    <p class="forest-quote">in a forest, the understory holds more life than the canopy above it. the most important growth has always happened beneath what's visible.</p>
+    <p class="forest-quote">in a forest, no tree stands alone. the roots signal each other underground — sharing what one has and another needs, catching stress before it spreads. the health of the whole lives in what moves between them.</p>
     <p class="forest-sublabel">regenerative by design</p>
   </div>
 </div>
@@ -1100,7 +1173,7 @@ footer {
         <p class="offering-price">$500</p>
       </div>
       <div class="offering-body">
-        <p>a two-hour strategic call for leaders who want a read before committing to the next move. you share the view from the top. we read what's underneath.</p>
+        <p>a two-hour strategic call for leaders who want a read before committing to the next move. you share the view from the top. we read what's underneath — where the signals connect, and what's actually upstream of the problem you think you have.</p>
         <p>requires pre-work submitted before the call — the more honest, the better the read. deductible in full from the ground truth if you decide to go deeper.</p>
         <span class="offering-italic-note">for founders who want a read before committing to the full engagement.</span>
       </div>
@@ -1210,6 +1283,7 @@ footer {
         </h2>
         <p class="about-title">founder, undrstory</p>
         <div class="about-bio-new">
+          <p>I first learned to read a system at its root studying food as medicine — the belief that you don't chase symptoms one at a time, you find what's upstream and heal it in the order the body can actually absorb. I never stopped reading that way. I just started doing it inside organizations.</p>
           <p>I've spent my career inside the machinery — not advising from a distance, but embedded in the decisions, the teams, the moments where things either connect or they don't. operations. product. strategy. the messy middle where what's on the slide meets what's actually happening on the ground floor.</p>
           <p>I've launched international offices, integrated acquisitions, built AI tools, reorganized departments, redesigned how companies onboard and retain their people. I've opened a wine bar, a gallery, audited a museum, hosted wellness retreats, led teams through hypergrowth and through contraction. across tech, hospitality, wellness, nonprofit, the arts — the industries change. the patterns don't.</p>
           <p>that depth is what makes the read accurate. I'm not pattern-matching to a framework. I'm reading your specific system — how it moves, where it stalls, what it's actually optimized for whether you intended that or not.</p>
@@ -1228,7 +1302,7 @@ footer {
     <span class="alongside-strip-names">
       <span class="alongside-entry"><strong>Bird</strong> &nbsp;·&nbsp; operations & product during hypergrowth</span>
       <span class="alongside-entry"><strong>Function Health</strong> &nbsp;·&nbsp; systems enablement, AI operations & learning</span>
-      <span class="alongside-entry">and organizations ranging from community-rooted institutions to rapidly scaling venture-backed companies</span>
+      <span class="alongside-entry">and 10+ organizations ranging from community-rooted institutions to rapidly scaling venture-backed companies</span>
     </span>
   </div>
 </div>
