@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book the Canopy Walk — undrstory</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231F2A1C'/><text y='.9em' x='50%' text-anchor='middle' font-size='62' font-family='Georgia,serif' fill='%23A3B18A' dy='0.1em'>u</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<script src="https://js.stripe.com/v3/"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #1F2A1C; color: #F0EBE0; font-family: 'Raleway', sans-serif; font-weight: 300; line-height: 1.7; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.4rem 3.5rem; background: rgba(31,42,28,0.97); backdrop-filter: blur(8px); display: flex; justify-content: space-between; align-items: center; }
+.nav-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #F0EBE0; text-decoration: none; }
+nav a { font-size: 0.72rem; color: rgba(240,235,224,0.65); text-decoration: none; text-transform: uppercase; letter-spacing: 0.16em; transition: color 0.2s; }
+nav a:hover { color: #F0EBE0; }
+section { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 8rem 3.5rem 5rem; }
+.book-inner { max-width: 700px; }
+h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 600; margin-bottom: 1rem; text-align: center; letter-spacing: -0.04em; }
+.subtitle { font-style: italic; font-size: 1.05rem; color: #c4ceb8; text-align: center; margin-bottom: 3rem; }
+form { display: flex; flex-direction: column; gap: 1rem; }
+input, textarea { width: 100%; background: rgba(240,235,224,0.06); border: 1px solid rgba(240,235,224,0.12); color: rgba(240,235,224,0.82); font-family: 'Raleway', sans-serif; padding: 1rem 1.2rem; border-radius: 2px; font-size: 0.92rem; outline: none; transition: border-color 0.2s; }
+input::placeholder, textarea::placeholder { color: rgba(240,235,224,0.35); }
+input:focus, textarea:focus { border-color: #A3B18A; background: rgba(240,235,224,0.09); }
+textarea { min-height: 140px; resize: vertical; }
+button { background: #c4ceb8; color: #1F2A1C; border: none; padding: 1rem 2rem; border-radius: 2px; cursor: pointer; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.72rem; transition: background 0.2s; margin-top: 1rem; width: fit-content; }
+button:hover { background: #A3B18A; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+.note { font-size: 0.85rem; color: rgba(240,235,224,0.45); text-align: center; margin-top: 2rem; }
+.note a { color: #A3B18A; text-decoration: none; }
+.error { color: #ff6b6b; font-size: 0.85rem; margin-top: 0.5rem; }
+footer { padding: 1.8rem 3.5rem; border-top: 1px solid rgba(163,177,138,0.1); display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; }
+footer a { color: rgba(240,235,224,0.28); text-decoration: none; }
+@media (max-width: 900px) { nav { padding: 1rem 1.5rem; } section { padding: 6rem 1.5rem 4rem; } h1 { font-size: 2.5rem; } footer { flex-direction: column; gap: 0.7rem; text-align: center; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">undrstory</a>
+  <div>
+    <a href="/#offerings" style="margin-right: 2rem;">the work</a>
+    <a href="/#about">about</a>
+  </div>
+</nav>
+
+<section>
+  <div class="book-inner">
+    <h1>the canopy walk</h1>
+    <p class="subtitle">two hours to clarity. let's begin.</p>
+
+    <form id="bookingForm">
+      <input type="text" name="name" placeholder="your name" required>
+      <span class="error" id="nameError"></span>
+
+      <input type="email" name="email" placeholder="your email" required>
+      <span class="error" id="emailError"></span>
+
+      <input type="text" name="company" placeholder="your company / what you're building" required>
+      <span class="error" id="companyError"></span>
+
+      <textarea name="moment" placeholder="what's the moment you're in right now?" required></textarea>
+      <span class="error" id="momentError"></span>
+
+      <button type="submit" id="submitBtn">book & pay $500 →</button>
+      <span class="error" id="submitError"></span>
+    </form>
+
+    <p class="note">payment secured through Stripe. questions? <a href="mailto:ally@undrstory.ink">ally@undrstory.ink</a></p>
+  </div>
+</section>
+
+<footer>
+  <span>undrstory</span>
+  <a href="mailto:ally@undrstory.ink">ally@undrstory.ink</a>
+  <span>© 2026 undrstory</span>
+</footer>
+
+<script>
+const stripe = Stripe('pk_live_51TpJoU5A29XzI5HKgJ3g8Cr7Va0HUBqxMSU62eKjrgzNNhHUU0JknUJ5u8IloMK1mBoDakIILvfvroG2d9pf3wtW00FwiKz38W');
+const form = document.getElementById('bookingForm');
+const submitBtn = document.getElementById('submitBtn');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  document.querySelectorAll('.error').forEach(el => el.textContent = '');
+
+  const formData = new FormData(form);
+  const data = {
+    name: formData.get('name'),
+    email: formData.get('email'),
+    company: formData.get('company'),
+    moment: formData.get('moment')
+  };
+
+  if (!data.name.trim()) { document.getElementById('nameError').textContent = 'Name required'; return; }
+  if (!data.email.trim()) { document.getElementById('emailError').textContent = 'Email required'; return; }
+  if (!data.company.trim()) { document.getElementById('companyError').textContent = 'Company required'; return; }
+  if (!data.moment.trim()) { document.getElementById('momentError').textContent = 'Tell us about your moment'; return; }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'processing...';
+
+  try {
+    const response = await fetch('/.netlify/functions/create-checkout-session', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    const { sessionId } = await response.json();
+    const result = await stripe.redirectToCheckout({ sessionId });
+    if (result.error) {
+      document.getElementById('submitError').textContent = result.error.message;
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'book & pay $500 →';
+    }
+  } catch (error) {
+    document.getElementById('submitError').textContent = 'Something went wrong. Try again.';
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'book & pay $500 →';
+  }
+});
+</script>
+</body>
+</html>
