@@ -11,26 +11,32 @@
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background: #1F2A1C; color: #F0EBE0; font-family: 'Raleway', sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 2rem; }
-.container { max-width: 600px; text-align: center; }
-h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 1.5rem; }
-p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; opacity: 0.9; }
-a { display: inline-block; background: #c4ceb8; color: #1F2A1C; padding: 1rem 2.5rem; text-decoration: none; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 2px; font-size: 0.9rem; transition: background 0.2s; }
+.container { max-width: 700px; text-align: center; }
+h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; margin-bottom: 1.5rem; font-weight: 600; letter-spacing: -0.04em; }
+.subtitle { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.3rem; color: #c4ceb8; margin-bottom: 3rem; line-height: 1.6; }
+.button-wrapper { margin: 3rem 0; }
+a { display: inline-block; background: #c4ceb8; color: #1F2A1C; padding: 1.5rem 3.5rem; text-decoration: none; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 2px; font-size: 0.95rem; transition: background 0.2s; }
 a:hover { background: #A3B18A; }
-.note { margin-top: 2rem; font-size: 0.95rem; opacity: 0.6; line-height: 1.7; }
-.note a { display: inline; padding: 0; background: none; color: #A3B18A; text-transform: none; letter-spacing: 0; font-size: inherit; }
+.note { font-size: 0.95rem; line-height: 1.8; opacity: 0.7; margin-top: 3rem; }
+.note a { display: inline; padding: 0; background: none; color: #A3B18A; text-transform: none; letter-spacing: 0; font-size: inherit; font-weight: normal; }
+footer { padding: 1.8rem 3.5rem; border-top: 1px solid rgba(163,177,138,0.1); display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; margin-top: 5rem; }
+@media (max-width: 900px) { h1 { font-size: 2.8rem; } }
 </style>
 </head>
 <body>
 
 <div class="container">
   <h1>thank you.</h1>
-  <p>payment received. next step: pick your time.</p>
-  <a href="https://calendly.com/ally-undrstory/canopy-walk">schedule on Calendly →</a>
+  <p class="subtitle">payment received.<br>next step: pick your time.</p>
   
-  <div class="note">
-    <p>expect pre-work intake about two weeks before your call. the sharper your answers, the sharper the read.</p>
-    <p style="margin-top: 1.5rem;">if you have questions, reach out to <a href="mailto:ally@undrstory.ink">ally@undrstory.ink</a></p>
+  <div class="button-wrapper">
+    <a href="https://calendly.com/ally-undrstory/canopy-walk">schedule on calendly →</a>
   </div>
+  
+  <p class="note">
+    expect pre-work intake about two weeks before your call. the sharper your answers, the sharper the read.<br><br>
+    if you have questions, reach out to <a href="mailto:ally@undrstory.ink">ally@undrstory.ink</a>
+  </p>
 </div>
 
 </body>
