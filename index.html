@@ -1312,11 +1312,53 @@ footer {
   <div class="contact-inner">
     <h2 class="contact-headline reveal">this is where it begins</h2>
     <p class="contact-sub reveal reveal-delay-1">choose your entry point and reach out.</p>
-    <form class="contact-form reveal reveal-delay-2" name="canopy-walk" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      ...all the form stuff...
+    
+    <div class="reveal reveal-delay-2" style="margin-bottom: 2rem;">
+      <div class="select-wrapper" style="margin-bottom: 2rem;">
+        <select id="offeringSelect" class="form-select" required>
+          <option value="" disabled selected>where would you like to start?</option>
+          <option value="canopy-walk">the canopy walk — two-hour read ($500)</option>
+          <option value="ground-truth">the ground truth — six-week diagnostic ($9,000)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Canopy Walk CTA -->
+    <div id="canopySection" style="display:none;" class="reveal reveal-delay-2">
+      <div style="background:rgba(163,177,138,0.08);border:1px solid rgba(163,177,138,0.15);border-radius:3px;padding:2.5rem;text-align:center;">
+        <p style="font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--bone);line-height:1.7;margin-bottom:1.5rem;">ready to book? head straight to the scheduling page and pick your time.</p>
+        <a href="/book" style="display:inline-block;background:#c4ceb8;color:#1F2A1C;padding:0.85rem 2rem;text-decoration:none;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;border-radius:2px;font-size:0.72rem;transition:background 0.2s;" onmouseover="this.style.background='#A3B18A'" onmouseout="this.style.background='#c4ceb8'">book the canopy walk →</a>
+      </div>
+    </div>
+
+    <!-- Ground Truth Inquiry Form -->
+    <form id="inquiryForm" name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display:none;" class="contact-form reveal reveal-delay-2">
+      <input type="hidden" name="form-name" value="inquiry">
+      <p style="display:none;"><input name="bot-field"></p>
+      <input type="text" name="name" placeholder="your name" class="form-input" required>
+      <input type="email" name="email" placeholder="your email" class="form-input" required>
+      <input type="text" name="company" placeholder="your company / what you're building" class="form-input">
+      <textarea name="message" placeholder="tell me about your business and what's drawing you to this work" class="form-textarea"></textarea>
+      <button type="submit" class="form-submit">send it →</button>
+      <p class="form-note">we'll review and reach out within 48 hours to explore timing and fit.</p>
     </form>
   </div>
 </section>
+
+<script>
+document.getElementById('offeringSelect').addEventListener('change', function() {
+  const canopySection = document.getElementById('canopySection');
+  const inquiryForm = document.getElementById('inquiryForm');
+  
+  if (this.value === 'canopy-walk') {
+    canopySection.style.display = 'block';
+    inquiryForm.style.display = 'none';
+  } else if (this.value === 'ground-truth') {
+    canopySection.style.display = 'none';
+    inquiryForm.style.display = 'block';
+  }
+});
+</script>
 
 <!-- footer -->
 <footer>
